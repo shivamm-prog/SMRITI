@@ -1,0 +1,496 @@
+/* MindSetu Component Styles - Elderly-First Design System */
+
+/* ==========================================================================
+   BUTTONS (Large Touch Targets, Minimum 52px height)
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  font-family: inherit;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  min-height: var(--touch-target-min);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background-color: var(--primary-600);
+  color: var(--text-on-primary);
+  border-color: var(--primary-600);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-700);
+  border-color: var(--primary-700);
+}
+
+.btn-secondary {
+  background-color: var(--primary-50);
+  color: var(--primary-900);
+  border-color: var(--primary-200);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-100);
+  border-color: var(--primary-400);
+}
+
+.btn-outline {
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  border-color: var(--border-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--bg-card-subtle);
+  border-color: var(--primary-500);
+}
+
+.btn-success {
+  background-color: var(--accent-emerald);
+  color: #FFFFFF;
+  border-color: var(--accent-emerald);
+}
+
+.btn-success:hover {
+  background-color: #047857;
+}
+
+/* SOS Emergency Button */
+.btn-sos {
+  background-color: var(--sos-bg);
+  color: var(--sos-text);
+  border-color: var(--sos-bg);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  box-shadow: 0 4px 14px var(--sos-glow);
+}
+
+.btn-sos:hover {
+  background-color: var(--sos-hover);
+  border-color: var(--sos-hover);
+}
+
+/* Voice "Tap to Talk" Button */
+.btn-voice {
+  background: linear-gradient(135deg, var(--primary-600), var(--primary-800));
+  color: #FFFFFF;
+  min-height: 60px;
+  padding: 0.85rem 2rem;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btn-voice:hover {
+  background: linear-gradient(135deg, var(--primary-700), var(--primary-900));
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.45);
+}
+
+.btn-lg {
+  min-height: var(--touch-target-large);
+  font-size: var(--font-size-lg);
+  padding: 1rem 2rem;
+  border-radius: var(--radius-lg);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn-icon-only {
+  width: var(--touch-target-min);
+  height: var(--touch-target-min);
+  padding: 0;
+  border-radius: var(--radius-full);
+}
+
+/* ==========================================================================
+   CARDS (Calm, Rounded, Generous Padding)
+   ========================================================================== */
+
+.card {
+  background-color: var(--bg-card);
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.card-interactive {
+  cursor: pointer;
+}
+
+.card-interactive:hover {
+  border-color: var(--primary-400);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.card-highlight {
+  background-color: var(--primary-50);
+  border-color: var(--primary-200);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   HEADER & NAVIGATION
+   ========================================================================== */
+
+.app-header {
+  background-color: var(--bg-card);
+  border-bottom: 1.5px solid var(--border-subtle);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  box-shadow: var(--shadow-sm);
+}
+
+.app-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  gap: 1rem;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+  color: var(--primary-900);
+  text-decoration: none;
+}
+
+.brand-badge {
+  background-color: var(--primary-100);
+  color: var(--primary-800);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Role Switcher Pill (Dev / Evaluation Helper) */
+.role-switcher-pill {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-app);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-full);
+  padding: 0.2rem;
+  gap: 0.25rem;
+}
+
+.role-pill-btn {
+  padding: 0.35rem 0.85rem;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.role-pill-btn.active {
+  background-color: var(--primary-600);
+  color: #FFFFFF;
+}
+
+/* Desktop Navigation Links */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.nav-link:hover {
+  background-color: var(--primary-50);
+  color: var(--primary-700);
+  text-decoration: none;
+}
+
+.nav-link.active {
+  background-color: var(--primary-100);
+  color: var(--primary-800);
+  font-weight: 700;
+}
+
+/* Bottom Navigation Bar (Crucial for Mobile & Tablet Elderly Patients) */
+.bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bg-card);
+  border-top: 1.5px solid var(--border-color);
+  padding: 0.4rem 0.5rem calc(0.4rem + env(safe-area-inset-bottom, 0px));
+  z-index: 50;
+  box-shadow: 0 -4px 16px rgba(15, 23, 42, 0.08);
+}
+
+@media (max-width: 900px) {
+  .desktop-nav {
+    display: none;
+  }
+  .bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .app-main {
+    padding-bottom: 80px !important;
+  }
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.5rem;
+  border-radius: var(--radius-sm);
+  color: var(--text-subtle);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  min-width: 54px;
+  min-height: 48px;
+}
+
+.bottom-nav-item.active {
+  color: var(--primary-700);
+  font-weight: 700;
+}
+
+.bottom-nav-item svg {
+  margin-bottom: 2px;
+}
+
+/* ==========================================================================
+   STATUS BADGES & PILLS
+   ========================================================================== */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-full);
+}
+
+.badge-blue {
+  background-color: var(--primary-100);
+  color: var(--primary-800);
+}
+
+.badge-green {
+  background-color: var(--accent-emerald-light);
+  color: #065F46;
+}
+
+.badge-amber {
+  background-color: var(--accent-amber-light);
+  color: #92400E;
+}
+
+.badge-rose {
+  background-color: var(--accent-rose-light);
+  color: #9F1239;
+}
+
+.badge-offline {
+  background-color: #FEF3C7;
+  color: #92400E;
+  border: 1px solid #FCD34D;
+}
+
+.badge-online {
+  background-color: #DCFCE7;
+  color: #166534;
+  border: 1px solid #86EFAC;
+}
+
+.badge-pending {
+  background-color: #F1F5F9;
+  color: #475569;
+  border: 1px dashed #94A3B8;
+}
+
+/* ==========================================================================
+   MODALS (Centered, High-Contrast Accessible)
+   ========================================================================== */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  z-index: 100;
+}
+
+.modal-container {
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1.5px solid var(--border-subtle);
+}
+
+.modal-close-btn {
+  background: var(--bg-app);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-full);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+.modal-close-btn:hover {
+  background-color: var(--primary-50);
+  color: var(--primary-700);
+}
+
+/* ==========================================================================
+   FORMS & INPUTS (Large & Clear for Seniors & Caregivers)
+   ========================================================================== */
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.45rem;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  min-height: var(--touch-target-min);
+  padding: 0.75rem 1rem;
+  font-family: inherit;
+  font-size: var(--font-size-base);
+  color: var(--text-main);
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-fast);
+}
+
+.form-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--primary-600);
+  outline: none;
+}
+
+/* ==========================================================================
+   ANIMATIONS & FEEDBACK (Subtle & Calming)
+   ========================================================================== */
+
+@keyframes pulseGentle {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.04); opacity: 0.88; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-pulse-gentle {
+  animation: pulseGentle 2.5s infinite ease-in-out;
+}
+
+@keyframes waveBar {
+  0%, 100% { height: 16px; }
+  50% { height: 48px; }
+}
+
+.wave-bar {
+  width: 6px;
+  background-color: var(--primary-500);
+  border-radius: 4px;
+  animation: waveBar 1.2s infinite ease-in-out;
+}
+
+.wave-bar:nth-child(2) { animation-delay: 0.15s; }
+.wave-bar:nth-child(3) { animation-delay: 0.3s; }
+.wave-bar:nth-child(4) { animation-delay: 0.45s; }
+.wave-bar:nth-child(5) { animation-delay: 0.6s; }

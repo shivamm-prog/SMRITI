@@ -1,0 +1,8 @@
+import 'file_saver_interface.dart';
+import 'file_saver_stub.dart'
+    if (dart.library.io) 'file_saver_io.dart'
+    if (dart.library.html) 'file_saver_web.dart';
+
+export 'file_saver_interface.dart';
+
+final FileSaver defaultFileSaver = createFileSaver();

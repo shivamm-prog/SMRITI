@@ -1,0 +1,15 @@
+analyzer:
+  exclude:
+    - build/**
+    - android/**
+    - windows/**
+    - web/**
+  errors:
+    avoid_web_libraries_in_flutter: ignore
+    deprecated_member_use: ignore
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    use_super_parameters: true
+    prefer_const_constructors: false
